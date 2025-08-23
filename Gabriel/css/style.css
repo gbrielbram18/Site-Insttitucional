@@ -1,103 +1,198 @@
+/* reset */
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    background: rgb(2 63 167);
+body {
+  font-family: Arial, sans-serif;
+  /* background: #37379e; */
+  color: #222;
 }
 
-header h1 {
-    color: white;
-    padding-left: 20px;
-    padding-top: 20;
+/* HEADER */
+.header-wrap {
+  background: rgb(7, 115, 255) ;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-/*Menu do Header*/
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+/**/
 
 
-.menu {
+
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #222;
+}
+
+.logo-badge {
+    width: 32px;
+    height: 32px;
+    background: #007acc;
+    color: #000000;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color: #dde6ea;
-    list-style: none;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 6px;
+    border: 1px solid black;
+}
+/**/
+
+
+
+/* MENU */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-.menu ul {
-    display: flex;
-
+.nav-list li a,
+.nav-list summary {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
 }
 
-.menu li {
-    /*Espaçamentos*/
-    padding: 18px;
+.nav-list li a:hover,
+.nav-list summary:hover {
+  background: #eee;
 }
-
-.menu ul li {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.menu li a {
-    font-size: 23px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    padding: 18px;
-}
+/**/
 
 
 
-.menu li a:hover {
-    text-decoration: underline;
-}
-
-
-.dropd {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #ffffff00;
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+/* DROPDOWN */
+details {
+  position: relative;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
-.dropdown-content {
+.dropdown a {
+  padding: 8px 12px;
+  color: #222;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background: #f5f5f5;
+}
+/**/
+
+
+
+/* buttons */
+.cta {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.btn-outline {
+  background: rgb(19, 204, 19);
+  border: 1px solid #ccc;
+  color: #222;
+  border: 1px solid black;
+}
+
+.btn-primary {
+    background: #007acc;
+    color: #fff;
+}
+/**/
+
+
+
+/* hamburder (MOBILE) */
+#nav-toggle {
+  display: none;
+}
+
+.hamb {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamb .line {
+  width: 22px;
+  height: 2px;
+  background: #222;
+  margin: 4px 0;
+}
+/**/
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hamb {
+    display: flex;
+  }
+
+  nav {
     display: none;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
+    top: 70px;
+    left: 0;
+  }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+  #nav-toggle:checked ~ nav {
     display: block;
-}
+  }
 
-.dropdown-content a:hover {
-    background-color: #dde6ea;
-}
+  .nav-list {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+  .cta {
+    display: none; /* Esconde os botões no mobile pra simplificar */
+  }
 }
-
-.dropdown:hover .dropbtn {
-    background-color: rgb(2 63 167);
-}
+/**/

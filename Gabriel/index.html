@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <header>
-        <h1>N-Multifibra</h1>
-        <nav class="menu">
-            <ul>
+  <header class="header-wrap">
+    <div class="container bar">
+      <!-- logo N -->
+      <a class="logo" href="#">
+        <span class="logo-badge">N</span>
+        <span>N-Multifibra</span>
+      </a>
 
-                <li>
-                    <a href="">Inicio</a>
-                </li>
+      <!-- menu mobile responsivo -->
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="hamb">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </label>
 
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Dropdown</button>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </div>
-                </li>
+      <nav class="menu">
+        <ul class="nav-list">
+          <li><a href="#">Início</a></li>
+          <li>
+            <!--details para abrir mais opções de busca no header -->
+            <details>
+              <summary>Produtos ▾</summary>
+              <div class="dropdown">
+                <a href="#">Combos e planos</a>
+                <a href="#">Telefonia fixa</a>
+                <a href="#">Streaming + TV</a>
+                <a href="#">Rede Mesh</a>
+                <a href="#">Todos os produtos</a>
+              </div>
+            </details>
+          </li>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Para sua empresa</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
 
-                <li>
-                    <a href="">Quem somos</a>
-                </li>
-
-                <li>
-                    <a href="">Para sua empresa</a>
-                </li>
-
-                <li>
-                    <a href="">Blog</a>
-                </li>
-
-                <li>
-                    <a href="">FAQ</a>
-                </li>
-
-            </ul>
-        </nav>
-    </header>
-
+      <!-- buttons para zap e para premiuin -->
+      <div class="cta">
+        <a class="btn btn-outline" href="#"><i style="font-size:24px" class="fa">&#xf232;</i></a>
+        <a class="btn btn-primary" href="#">Assinantes premiun</a>
+      </div>
+    </div>
+  </header>
 </body>
-
 </html>
+
+
