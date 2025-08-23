@@ -114,7 +114,6 @@ details {
 /**/
 
 
-
 /* buttons */
 .cta {
   display: flex;
@@ -144,28 +143,6 @@ details {
 }
 /**/
 
-
-
-/* hamburder (MOBILE) */
-#nav-toggle {
-  display: none;
-}
-
-.hamb {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamb .line {
-  width: 22px;
-  height: 2px;
-  background: #222;
-  margin: 4px 0;
-}
-/**/
-
-
 /* Responsividade */
 @media (max-width: 768px) {
   .hamb {
@@ -194,5 +171,24 @@ details {
   .cta {
     display: none; /* Esconde os botões no mobile pra simplificar */
   }
+}
+/**/
+
+/* hamburder (MOBILE) */
+#nav-toggle {
+  display: none;
+}
+
+.hamb {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamb .line {
+  width: 22px;
+  height: 2px;
+  background: #222;
+  margin: 4px 0;
 }
 /**/
