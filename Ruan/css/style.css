@@ -1,0 +1,44 @@
+
+body {
+    margin: 0;
+    width: 1040px;
+   
+   
+}
+
+.titulo-fundo{
+    background-image: url('../../img/multi.jpg');
+    width: 1040px;
+    background-repeat: no-repeat;
+    height: 400px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  border: 1px solid rgb(2 63 167);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 05px 05px rgb(2 63 167);
+  background: #dde6ea;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  border-radius:15px;
+}
+
+.card-titulo {
+  margin-top: 1em;
+  display: inline-block;
+  padding: .5em;
+}
