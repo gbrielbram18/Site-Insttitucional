@@ -81,6 +81,11 @@ body {
 .nav-list summary:hover {
   background: #eee;
 }
+
+summary{
+  text-decoration: none;
+  
+}
 /**/
 
 
@@ -192,3 +197,11 @@ details {
   margin: 4px 0;
 }
 /**/
+
+
+/*Cards de informação e produtos*/
+
+.cards{
+justify-content: space-around;
+
+}
