@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #1a1a2e;
+  background: #007acc;
   color: #222;
 }
 
@@ -173,5 +173,17 @@ details {
   .cta {
     display: none; /* Esconde os botões no mobile pra simplificar */
   }
+}
+
+
+
+/*Main*/
+ main{
+  font-size: ;
+ }
+
+
+main strong{
+  color: rgb(37 99 235/var(--tw-text-opacity));
 }
 
