@@ -239,7 +239,7 @@ details {
 .courses{
   display: flex;
   margin-top: 80px;
-  gap: 200px;
+  gap: 250px;
   justify-content: center;
   
 }
@@ -266,9 +266,80 @@ details {
 .course-category{
   background-color: yellow;
   justify-content: flex-end;
-  margin-top: 1em;
+  margin-left: 63PX;
+  text-align: left;
+  position: absolute;
+  top: 76%;
   border-radius: 5px;
-  padding: 5px;
+  padding: 3px;
+
 
 }
 
+.course-meg{
+  background-color: yellow;
+  justify-content: flex-end;
+  margin-left: 150PX;
+  text-align: left;
+  position: absolute;
+  top: 76%;
+  padding: 3px;
+}
+
+.text-money{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  align-items: center;
+  
+}
+
+.text-val{
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 40px;
+  
+}
+
+.text-sifra{
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  margin-left: 200px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.text-pre{
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 40px;
+}
+
+.card-1{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+}
+
+.valor{
+  display: flex;
+  justify-content: flex-end;
+}
+.centavos{
+  display: flex;
+  align-items: center;
+}
+
+.card-2{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+
+}
+
+.valor-2{
+  display: flex;
+  justify-content: flex-end;
+  
+}
