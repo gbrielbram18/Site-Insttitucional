@@ -95,9 +95,11 @@ details {
   padding: 8px 12px;
   color: #222;
   text-decoration: none;
+
 }
 
 .dropdown a:hover {
+  font-size: 1.5rem;
   background: #f5f5f5;
 }
 
@@ -173,15 +175,100 @@ details {
   .cta {
     display: none; /* Esconde os botões no mobile pra simplificar */
   }
+
+
+  /*Este img e do main*/
+  /*Quando a tela for pequena a foto ira sumir */
+   img{
+      width: 0px;
+    }
+
+
+
 }
 
 
 
 /*Main*/
 
-
-
 main strong{
   color: rgb(37 99 235/var(--tw-text-opacity));
+}
+
+
+
+.container-main{
+  background-color: whitesmoke;
+  margin: 0.5%;
+  padding: 5px;
+ display: grid;
+ grid-template-columns: auto auto auto;
+
+
+}
+
+.container-main strong a{
+  text-decoration: none;
+  color: #222;
+  
+}
+
+
+.container-main strong a:hover{
+font-size: 2rem;
+transition: 1.5s;
+}
+
+
+
+@media (min-width: 768px) {
+    .container-info  {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+   
+
+}
+#containerPQcontratar{
+  display: grid;
+  margin: 10px;
+}
+
+.container-info button{
+  margin: 10px;
+  padding: 5px;
+  background-color: #007acc;
+  border: black solid 1px;
+  border-radius: 5px;
+  color: #fff;
+}
+.container-info button:hover{
+  transition: 1.5s;
+  transform: scale(1.1);
+  background-color: #61c0ff;
+  color: #ffffff;
+  
+
+}
+
+
+.container-info{
+  display: grid;
+/* display: grid; */
+grid-template-columns: auto auto auto auto ;
+margin: 10px 10px 10px 10px;
+
+
+}
+
+/* .container-info img{
+  display: flex;
+  justify-content: space-between;
+
+} */
+
+.subcont{
+  align-self: flex-start;
 }
 
