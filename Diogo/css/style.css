@@ -95,7 +95,6 @@ details {
     padding: 8px 12px;
     color: #222;
     text-decoration: none;
-
 }
 
 .dropdown a:hover {
@@ -147,7 +146,7 @@ details {
     margin: 4px 0;
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO MENU */
 @media (max-width: 768px) {
     .hamb {
         display: flex;
@@ -174,191 +173,132 @@ details {
 
     .cta {
         display: none;
-        /* Esconde os botões no mobile pra simplificar */
     }
 
-
-    /*Este img e do main*/
-    /*Quando a tela for pequena a foto ira sumir */
     img {
         width: 0px;
     }
 
-
-
+    /* exemplo que você tinha */
 }
 
+/* -------- MAIN / CARDS -------- */
 
-
-/*Main*/
-
-main strong {
-    color: rgb(37 99 235/var(--tw-text-opacity));
-}
-
-
-
-.container-main {
-    background-color: whitesmoke;
-    margin: 0.5%;
-    padding: 5px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-
-
-}
-
-.container-main strong a {
-    text-decoration: none;
-    color: #222;
-
-}
-
-
-.container-main strong a:hover {
-    font-size: 2rem;
-    transition: 1.5s;
-}
-
-
-
-@media (min-width: 768px) {
-    .container-info {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-
-
-
-}
-
-#containerPQcontratar {
-    display: grid;
-    margin: 10px;
-}
-
-.container-info button {
-    margin: 10px;
-    padding: 5px;
-    background-color: #007acc;
-    border: black solid 1px;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.container-info button:hover {
-    transition: 1.5s;
-    transform: scale(1.1);
-    background-color: #61c0ff;
-    color: #ffffff;
-
-
-}
-
-
-.container-info {
-    display: grid;
-    /* display: grid; */
-    grid-template-columns: auto auto auto auto;
-    margin: 10px 10px 10px 10px;
-
-
-}
-
-/* .container-info img{
-  display: flex;
-  justify-content: space-between;
-
-} */
-
-.subcont {
-    align-self: flex-start;
-}
-
-/* Main */
-
-#cards{
+#cards {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
-#card {
+.card {
     display: flex;
-    background-color: white;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    gap: 20px;
-    width: 400px;
-    border: #222 solid 1px;
-    border-radius: 10px;
+    background-color: #fff;
+    width: 300px;
+    border: #e0e0e0 1px solid;
+    border-radius: 12px;
+    padding: 20px;
+    gap: 14px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-#cardbolinha{
-    font-size: 10px;
-    background: gold;
-    color:  #001a4d;;
-    padding: 5px 12px;
-    border-radius: 6px;
+.card:hover {
+    transition: 0.2s;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgb(229, 255, 0);
+}
+
+.cardbolinha {
     position: relative;
-    top: -10px;
-    border:black solid 1px;
-}
-
-
-#card-preco {
-    margin: 10px;
-    font-size: 50px;
-    /* tamanho do número */
-    font-weight: bold;
-    color: #001a4d;
-    position: relative;
-    /* referência para o posicionamento */
-    display: inline-block;
-
-}
-
-#small {
-    font-size: 20px;
-    position: absolute;
-    top: -25px;
-    /* sobe acima do número */
-    right: 200px;
-    color: #001a4d;
-    
-}
-
-#highlight {
-    background: gold;
-    font-size: 10px;
-    /* tamanho do GIGA */
-    padding: 5px 12px;
-    border-radius: 6px;
-    position: relative;
+    /* topo do número */
     top: -30px;
-    /* ajusta para alinhar no meio do número */
-    left: -50px;
-    /* encosta no 1 */
+    font-size: 12px;
+    background: gold;
+    color: #001a4d;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid #caa200;
+    font-weight: 700;
 }
-#card button{
+
+.card-label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #001a4d;
+    letter-spacing: .08em;
+    position: relative;
+    /* topo do número */
+    right: 100px;
+}
+
+
+.card-preco {
+    position: relative;
+    /* base para posicionar o GIGA */
+    display: inline-block;
+    /* encolhe ao tamanho do conteúdo */
+    line-height: 1;
+    /* cola melhor o badge */
+}
+
+.card-preco .num {
+    font-size: 72px;
+    font-weight: 800;
+    color: #001a4d;
+}
+
+.card-preco .highlight {
+    position: absolute;
+    top: 30px;
+    /* topo do número */
+    right: -35px;
+    /* ajuste fino lateral */
+    background: gold;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #001a4d;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* Preço (opcional) */
+.card-valor {
+    font-size: 18px;
+    color: #333;
+}
+
+.card-valor .preco {
+    font-weight: 800;
+    font-size: 22px;
+    color: #000000;
+}
+
+.card-valor .mes {
+    opacity: .8;
+}
+
+/* Botão */
+.card button {
     width: 100%;
     background-color: #138604;
-    border: black solid 1px;
-    border-radius: 5px;
+    border: 1px solid #0f6c03;
+    border-radius: 8px;
     color: #fff;
-    padding: 10px 20px;
-    margin-bottom: 20px;
+    padding: 12px 20px;
+    margin-top: 6px;
     cursor: pointer;
-
+    font-size: 16px;
+    font-weight: 700;
 }
-#card button:hover {
-    transition: 1.5s;
-    transform: scale(1.1);
+
+.card button:hover {
+    transition: 0.2s;
+    transform: translateY(-1px);
     background-color: #1db608;
-    color: #ffffff;
 }
