@@ -174,6 +174,8 @@ details {
   }
 }
 
+
+/* Primeira parte do projeto*/
 .article-content{
     align-items: center;
     display: block;
@@ -201,6 +203,8 @@ details {
     width: 300px;
     padding: 10px;
     background-color: yellow;
+    border: yellow;
+    font-weight: 600;
     display: block; 
     margin-left: auto;
     margin-right: auto;
@@ -245,12 +249,23 @@ details {
  
 }
 
+
+
+/*Section pai dos cards   */
 .courses{
   display: flex;
   margin-top:70px;
   gap: 200px;
   justify-content: center;
   
+}
+
+/*Todas class do card 1*/
+.card-1{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border: solid 1px black;
 }
 
 .text-tilt{
@@ -268,7 +283,7 @@ details {
 .text-numb{
   display: block;
   justify-content: flex-end;
-  margin-left: 35px;
+  margin-left: 60px;
   text-align: left;
   font-weight: 600;
   font-size: 85px;
@@ -280,8 +295,9 @@ details {
 .course-category{
   background-color: yellow;
   justify-content: flex-end;
-  margin-left: 63PX;
+  margin-left: 87PX;
   text-align: left;
+  font-weight: 600;
   position: absolute;
   top: 70%;
   border-radius: 5px;
@@ -292,19 +308,25 @@ details {
 
 .course-meg{
   background-color: yellow;
+  border: yellow;
   justify-content: flex-end;
   margin-left: 150PX;
   text-align: left;
+  font-weight: 600;
   position: absolute;
   top: 70%;
   padding: 3px;
 }
 
+.valor{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
 .text-money{
   display: flex;
   justify-content: flex-end;
-  text-align: left;
-  margin-left: 200px;
   margin-top: 10px;
   align-items: center;
   
@@ -312,52 +334,53 @@ details {
 
 .text-val{
   justify-content: flex-end;
-  text-align: left;
+  text-align: right;
+  margin-right: 5px;
   font-size: 40px;
   
 }
 
-.text-sifra{
-  display: flex;
-  justify-content: flex-end;
-  text-align: left;
-  margin-left: 300px;
-  margin-top: 10px;
-  align-items: center;
-}
-
-.text-pre{
-  justify-content: flex-end;
-  text-align: left;
-  font-size: 40px;
-}
-
-.card-1{
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  border: solid 1px black;
-}
-
-.valor{
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
-  margin-right: 100px;
-
-}
 .centavos{
   display: flex;
   font-size: 20px;
-  
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 18px;
 
 }
 
+.mes{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 20px;
+  margin-top: 18px;
+  color: gray;
+  
+}
 
+.course-cont{
+  background-color: green;
+  justify-content: flex-end;
+  border-radius: 5px;
+  padding: 9px;
+  text-align: center;
+  margin-top: 0;
+  color: white;
+  transition-property: transform;
+  
+}
+
+.course-cont:hover{
+  background: #50C878;
+}
+
+/*Todas as class do card 2/3 */
 .card-2{
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 400px;
   border: solid 1px black;
 
 }
@@ -368,18 +391,51 @@ details {
   
 }
 
-.course-cont{
-  background-color: green;
+
+.text-sifra{
+  display: flex;
   justify-content: flex-end;
-  border-radius: 5px;
-  padding: 9px;
-  text-align: center;
-  color: white;
-  transition-property: transform;
-  
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 10px;
+  align-items: center;
 }
 
-.course-cont:hover{
-  background: #50C878;
+.text-pre{
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 40px;
 }
+
+.text-numb-2{
+  display: block;
+  justify-content: flex-end;
+  margin-left: 30px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 85px;
+  position: absolute;
+  top: 66%;
+}
+
+.mes-2{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 20px;
+  margin-top: 18px;
+  color: gray;
+}
+
+/*Informações para contrato da internet*/
+.course-inform{
+  display: flex;
+  text-align: left;
+  margin-left: 25px;
+  padding: 1em;
+  line-height: 35px;
+  font-size: 20px;
+}
+
 
