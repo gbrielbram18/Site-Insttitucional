@@ -1,10 +1,14 @@
-
+.banner{
+  margin: 30px;
+}
 
 .lista-cards{
     display: grid;
     grid-template-columns: auto auto auto auto;
     margin: 30px 30px 0 30px;
-    
+    gap: 50px;
+    justify-content: center;
+
 }
 .card{
     border: #222 solid 1px;
@@ -32,14 +36,21 @@
     font-size: 15px;
     background-color: #007acc;
     text-align: center;
-}
-
-a {
+  }
+  
+  a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size:small;
     color: inherit;
 }
+
+.saiba-mais:hover {
+    background-color: #005f99;
+    color: white;
+    text-decoration: none;
+}
+
 
 /* RESET BÁSICO */
 * {
@@ -216,15 +227,21 @@ details {
   .cta {
     display: none; /* Esconde os botões no mobile pra simplificar */
   }
+
+  .img{
+    width: 0px;
+  }
+
 }
 
 
 
 /*Main*/
 
-
-
 main strong{
   color: rgb(37 99 235/var(--tw-text-opacity));
 }
+
+
+
 
