@@ -232,14 +232,14 @@ main strong {
   }
 
   .cards {
-    margin:0;
+    margin-top: 30px;
     width: 100%;
     display: flex;
-    height: 100%;
+    height: 600px;
+    border: solid red;
   }
 
   .iniciativas {
-    border: solid #222;
     align-items: center;
     padding: 1em;
     flex-basis: 30%;
@@ -249,7 +249,7 @@ main strong {
     margin-top: 1em;
   }
 
-  .carousel {
+  .carosel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -257,6 +257,7 @@ main strong {
     width: 100%;
     flex-basis: 70%;
     height: max-content;
+    padding-top: 30px;
   }
 
   .slide {
@@ -265,38 +266,33 @@ main strong {
     scroll-snap-align: start;
   }
 
-  .nav {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .nav a {
-    display: inline-block;
-    margin: 0 4px;
-    padding: 6px 12px;
-    background: #eee;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    color: #333;
-  }
-
-  .nav a:hover {
-    background: #ccc;
-  }
-
   .slide {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: ;
     width: 180px;
-    border: black 1px solid;
+    border: black 2px solid;
     border-radius: 12px;
     padding: 20px;
-    gap: 14px;
-    text-align: center;
+    gap: 18px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    /*background-image:url(https://nmultifibra.com.br/_next/image?url=%2Fsolidary-action-2.png&w=1920&q=75);*/
+    /*background-image:url(https://nmultifibra.com.br/_next/image?url=https%3A%2F%2Fcms.nmultifibra.com.br%2Fuploads%2FBanner_wifi_mesh_2_11e46bfa73.png&w=3840&q=90);*/
     height: auto;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: #9fd6fc;
+    color: rgb(56, 55, 55);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .slide:hover {
+    transform: translateY(-10px)
+  }
+
+  .foto{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
   }
