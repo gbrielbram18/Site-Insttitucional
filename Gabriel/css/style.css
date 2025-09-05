@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -276,6 +277,23 @@ margin: 10px 10px 10px 10px;
 
 /* NOTICIAS*/
 
+.container-maincard{
+  background-color: whitesmoke;
+  margin: 0.5%;
+  padding: 5px;
+  display: block;
+  gap: 2px;
+  text-decoration: none ;
+  
+}
+
+.container-maincard div a{
+  color: black;
+  
+
+}
+
+
 .subcontainer{
   background-color: #ccc;
   justify-content: space-between;
@@ -283,6 +301,8 @@ margin: 10px 10px 10px 10px;
   margin: 25px;
   padding: 20px;
   text-align: center;
+  
+
 }
 
 .container-main h2{
@@ -296,6 +316,8 @@ margin: 10px 10px 10px 10px;
   margin: 25px;
   padding: 30px;
   text-align: center;
+  display: grid;
+  
 }
 
 .container-main a{
@@ -304,7 +326,19 @@ margin: 10px 10px 10px 10px;
 }
 
 .container-main a:hover{
-transition: 1.5s;
-transform: scale(1.05);
+  transition: 1.5s;
+  transform: scale(1.05);
 
+}
+
+
+.container-tres{
+  background-color: #ccc;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin: 25px;
+  padding: 30px;
+  text-align: center;
+  display: grid;
+  
 }
