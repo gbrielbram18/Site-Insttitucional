@@ -540,13 +540,12 @@ details {
 
 .text-part2{
   width: 830PX;
-  display: block;
-  justify-content: flex-end;
+  display: flexbox;
   text-align: left;
-  padding: 60px;
   margin-left: 800px;
-  line-height: 40px
-  
+  line-height: 40px;
+  position: absolute;
+  top: 160%;
 }
 
 .title-2{
@@ -556,5 +555,12 @@ details {
 }
 
 .part-2tiltle{
-  
+  color: gray;
+  padding: 50px;
 }
+
+.section-2{
+  display: flexbox;
+  justify-content: flex-end;
+}
+
