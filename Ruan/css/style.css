@@ -1,4 +1,3 @@
-/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
@@ -230,11 +229,15 @@ main strong {
   .container-info {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
   .cards {
+    margin-top: 30px;
     margin:0;
     width: 100%;
     display: flex;
+    height: 600px;
+    border: solid red;
     height: 100%;
   }
 
@@ -249,57 +252,53 @@ main strong {
     margin-top: 1em;
   }
 
-  .carousel {
+  .carosel {
     display: flex;
-    overflow-x: auto;
+    /*overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;*/
     width: 100%;
     flex-basis: 70%;
     height: max-content;
+    padding-top: 30px;
   }
 
   .slide {
-    flex: none;
+    flex: auto;
     width: 100%;
-    scroll-snap-align: start;
-  }
-
-  .nav {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .nav a {
-    display: inline-block;
-    margin: 0 4px;
-    padding: 6px 12px;
-    background: #eee;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    color: #333;
-  }
-
-  .nav a:hover {
-    background: #ccc;
+    /*scroll-snap-align: start;*/
   }
 
   .slide {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
     width: 180px;
-    border: black 1px solid;
+    border: black 2px solid;
     border-radius: 12px;
     padding: 20px;
-    gap: 14px;
-    text-align: center;
+    gap: 18px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    height: 250px;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: #9fd6fc;
+    color: rgb(56, 55, 55);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .slide:hover {
+    transform: translateY(-10px)
   }
 
   .foto{
-    width: 100%;
     height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+  }
+
+  a{
+    text-decoration: none;
   }
