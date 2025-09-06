@@ -113,7 +113,7 @@
       margin: 4px 0;
     }
 
-    /* ====== HERO (ADIÇÃO) ====== */
+    /* ====== HERO ====== */
     .hero{
       background: linear-gradient(135deg, #0b6fe6 0%, #0057b7 100%);
       color:#fff;
@@ -375,7 +375,7 @@
       text-align:center;
     }
 
-    /* ====== BENEFÍCIOS (ADIÇÃO) ====== */
+    /* ====== BENEFÍCIOS  ====== */
     .benefits{
       background:#f7f9fc;
       padding: 40px 0;
@@ -413,7 +413,7 @@
     }
     .benefit h3{ font-size:1.05rem; margin-bottom:6px; }
 
-    /* ====== DEPOIMENTOS (ADIÇÃO) ====== */
+    /* ====== DEPOIMENTOS  ====== */
     .testimonials{
       background:#fff;
       padding: 40px 0;
@@ -455,7 +455,7 @@
       justify-self:end;
     }
 
-    /* ====== CONTATO (ADIÇÃO) ====== */
+    /* ====== CONTATO  ====== */
     .contact{
       background:#f7f9fc;
       padding: 40px 0;
@@ -500,7 +500,7 @@
       border-color:#0b6fe6;
     }
 
-    /* ====== FAQ (ADIÇÃO) ====== */
+    /* ====== FAQ ====== */
     .faq{
       background:#fff;
       padding: 40px 0 50px 0;
