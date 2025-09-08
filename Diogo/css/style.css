@@ -302,3 +302,63 @@ details {
     transform: translateY(-1px);
     background-color: #1db608;
 }
+
+/* READ MORE DENTRO DOS CARDS */
+.card-more {
+    width: 100%;
+    text-align: left;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+
+.card-more summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #007acc;
+    list-style: none;
+}
+
+.card-more summary:focus {
+    outline: none;
+}
+
+.card-more .open::after {
+    content: " ▼";
+    font-size: 12px;
+}
+
+.card-more[open] .open {
+    display: none;
+}
+
+.card-more .close {
+    display: none;
+}
+
+.card-more[open] .close {
+    display: inline;
+}
+
+.card-more p {
+    margin-top: 6px;
+    line-height: 1.4;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+::-webkit-details-marker {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
