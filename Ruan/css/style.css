@@ -1,16 +1,15 @@
 /* Reset e base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: consolas, monospace;
-  background-color: #caf0f8;
-  color: #333;
-  padding: 20px;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #e5e5e5;
+  color: #222;
   line-height: 1.6;
+  margin: 0;
 }
 
 /* HEADER */
@@ -97,10 +96,28 @@ body {
   color: #222;
 }
 
-.btn-primary {
+#btn-primary {
   background: #007acc;
   color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
+
+#btn-primary:hover {
+  background-color: lightgray;
+  color: #007acc;
+}
+
+.btn-outline:hover {
+  background-color: lightgray;
+  color: #007acc;
+}
+
 
 #nav-toggle {
   display: none;
@@ -120,10 +137,12 @@ body {
 }
 
 /* Texto centralizado */
-span {
-  display: block;
-  text-align: center;
+.ini {
+  display: flex;
+  justify-content: center;
+
 }
+
 
 .txt {
   display: flex;
@@ -132,6 +151,22 @@ span {
   text-align: center;
   flex-direction: column;
   margin: 30px 0;
+  width: 60%;
+
+}
+
+.comercial {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+video {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Container de cards */
@@ -170,7 +205,7 @@ span {
   height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
 }
 
 .card h3 {
@@ -256,8 +291,6 @@ footer {
     display: none;
   }
 
-  /* OBS ORIGINAL: img ficava com width:0; 
-     Melhoramos a responsividade sem alterar sua estrutura */
   img {
     width: 100% !important;
     height: auto !important;
