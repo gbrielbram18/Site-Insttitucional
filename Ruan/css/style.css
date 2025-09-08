@@ -1,21 +1,25 @@
+/* Reset e base */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #222;
+  font-family: consolas, monospace;
+  background-color: #caf0f8;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
 }
 
 /* HEADER */
 .header-wrap {
-  background: rgb(29 78 216);
+  background: #fff;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
+  z-index: 50;
 }
 
 .container {
@@ -29,15 +33,16 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  flex-wrap: wrap;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
-  color: #fff;
+  color: #222;
+  gap: 6px;
 }
 
 .logo-badge {
@@ -52,64 +57,29 @@ body {
   margin-right: 6px;
 }
 
-/* MENU */
 .nav-list {
   list-style: none;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
-.nav-list li a,
-.nav-list summary {
+.nav-list li a {
   text-decoration: none;
-  color: #fff;
+  color: #222;
   font-weight: 600;
   padding: 6px 10px;
   border-radius: 4px;
 }
 
-.nav-list li a:hover,
-.nav-list summary:hover {
+.nav-list li a:hover {
   color: #ffd60a;
 }
 
-/* DROPDOWN */
-details {
-  position: relative;
-}
-
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 5px;
-}
-
-.dropdown a {
-  padding: 8px 12px;
-  color: #222;
-  text-decoration: none;
-
-}
-
-.dropdown a:hover {
-  font-size: 1.5rem;
-  background: #f5f5f5;
-}
-
-/* CTA */
 .cta {
   display: flex;
   gap: 10px;
-}
-
-.cta :hover {
-  background-color: #ccc;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -132,7 +102,6 @@ details {
   color: #fff;
 }
 
-/* HAMBURGER (MOBILE) */
 #nav-toggle {
   display: none;
 }
@@ -150,10 +119,118 @@ details {
   margin: 4px 0;
 }
 
-/* RESPONSIVO */
+/* Texto centralizado */
+span {
+  display: block;
+  text-align: center;
+}
+
+.txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+/* Container de cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Card individual */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card a.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+  color: #005a9c;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  margin-bottom: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+
 @media (max-width: 768px) {
   .hamb {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
   }
 
   nav {
@@ -177,128 +254,293 @@ details {
 
   .cta {
     display: none;
-    /* Esconde os botões no mobile pra simplificar */
   }
 
-
-  /*Este img e do main*/
-  /*Quando a tela for pequena a foto ira sumir */
+  /* OBS ORIGINAL: img ficava com width:0; 
+     Melhoramos a responsividade sem alterar sua estrutura */
   img {
-    width: 0px;
+    width: 100% !important;
+    height: auto !important;
   }
-
-
-
 }
 
-
-
-/*Main*/
-
-main strong {
-  color: rgb(37 99 235/var(--tw-text-opacity));
-}
-
-
-
-.container-main {
-  background-color: whitesmoke;
-  margin: 0.5%;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-
-
-}
-
-.container-main strong a {
-  text-decoration: none;
-  color: #222;
-
-}
-
-
-.container-main strong a:hover {
-  font-size: 2rem;
-  transition: 1.5s;
-}
-
-
-
-@media (min-width: 768px) {
-  .container-info {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+/* Telas pequenas */
+@media (max-width: 768px) {
+  .bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
   }
 
-}
-  .cards {
-    margin-top: 30px;
-    margin:0;
-    width: 100%;
-    display: flex;
-    height: 600px;
-    border: solid red;
-    height: 100%;
-  }
-
-  .iniciativas {
-    border: solid #222;
-    align-items: center;
-    padding: 1em;
-    flex-basis: 30%;
-  }
-
-  .texto {
-    margin-top: 1em;
-  }
-
-  .carosel {
-    display: flex;
-    /*overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;*/
-    width: 100%;
-    flex-basis: 70%;
-    height: max-content;
-    padding-top: 30px;
-  }
-
-  .slide {
-    flex: auto;
-    width: 100%;
-    /*scroll-snap-align: start;*/
-  }
-
-  .slide {
-    display: flex;
+  .nav-list {
     flex-direction: column;
     align-items: center;
-    width: 180px;
-    border: black 2px solid;
-    border-radius: 12px;
+    gap: 10px;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card a.card-link {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .card a.card-link {
     padding: 20px;
-    gap: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    height: 250px;
-    font-size: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Seção de compromisso */
+.compromisso {
+  max-width: 800px;
+  margin: 40px auto 40px;
+  text-align: center;
+}
+
+.compromisso h1 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+.compromisso p {
+  font-size: 1.1rem;
+}
+
+/* Indicadores */
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.indicador {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.indicador:hover {
+  transform: translateY(-5px);
+}
+
+.indicador h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.indicador p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #007acc;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .compromisso h2 {
+    font-size: 1.5rem;
+  }
+
+  .indicador p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Seção de atendimento */
+.atendimento-section {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.atendimento-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.atendimento-text {
+  flex: 1 1 400px;
+}
+
+.atendimento-text h2 {
+  color: #007acc;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.atendimento-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #005a9c;
+}
+
+.atendimento-text p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.atendimento-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.atendimento-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .atendimento-content {
+    flex-direction: column;
     text-align: center;
-    align-items: center;
-    background-color: #9fd6fc;
-    color: rgb(56, 55, 55);
-    font-family: Arial, Helvetica, sans-serif;
   }
 
-  .slide:hover {
-    transform: translateY(-10px)
+  .atendimento-text h3 {
+    font-size: 1.5rem;
   }
 
-  .foto{
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    height: 100%;
+  .atendimento-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Seção de avaliações */
+.avaliacoes {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.avaliacoes-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avaliacoes-header h2 {
+  font-size: 1.8rem;
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+.avaliacoes-header h3 {
+  font-size: 1.4rem;
+  color: #005a9c;
+  margin: 10px 0;
+}
+
+.nota {
+  margin: 10px 0;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc803;
+}
+
+.base {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-avaliar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-avaliar:hover {
+  background-color: #005a9c;
+}
+
+/*Depoimentos*/
+.depoimentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px auto;
+}
+
+.depoimento {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.depoimento h4 {
+  font-size: 1.1rem;
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+.depoimento p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .depoimentos {
+    grid-template-columns: 1fr;
   }
 
-  a{
-    text-decoration: none;
+  .avaliacoes-header h2 {
+    font-size: 1.5rem;
   }
+
+  .score {
+    font-size: 1.6rem;
+  }
+}
