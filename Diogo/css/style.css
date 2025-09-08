@@ -178,12 +178,9 @@ details {
     img {
         width: 0px;
     }
-
-    /* exemplo que você tinha */
 }
 
 /* -------- MAIN / CARDS -------- */
-
 #cards {
     display: flex;
     justify-content: center;
@@ -215,7 +212,6 @@ details {
 
 .cardbolinha {
     position: relative;
-    /* topo do número */
     top: -30px;
     font-size: 12px;
     background: gold;
@@ -232,18 +228,13 @@ details {
     color: #001a4d;
     letter-spacing: .08em;
     position: relative;
-    /* topo do número */
     right: 100px;
 }
 
-
 .card-preco {
     position: relative;
-    /* base para posicionar o GIGA */
     display: inline-block;
-    /* encolhe ao tamanho do conteúdo */
     line-height: 1;
-    /* cola melhor o badge */
 }
 
 .card-preco .num {
@@ -255,9 +246,7 @@ details {
 .card-preco .highlight {
     position: absolute;
     top: 30px;
-    /* topo do número */
     right: -35px;
-    /* ajuste fino lateral */
     background: gold;
     font-size: 13px;
     padding: 4px 8px;
@@ -267,7 +256,7 @@ details {
     white-space: nowrap;
 }
 
-/* Preço (opcional) */
+/* Preço */
 .card-valor {
     font-size: 18px;
     color: #333;
@@ -283,7 +272,7 @@ details {
     opacity: .8;
 }
 
-/* Botão */
+/* Botão principal */
 .card button {
     width: 100%;
     background-color: #138604;
@@ -303,62 +292,27 @@ details {
     background-color: #1db608;
 }
 
-/* READ MORE DENTRO DOS CARDS */
-.card-more {
-    width: 100%;
-    text-align: left;
-    margin-top: 8px;
-    font-size: 14px;
-    color: #333;
-    position: relative;
-}
-
+/* Botão Saiba Mais */
 .card-more summary {
-    cursor: pointer;
+    width: 260px;
+    height: auto;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 8px;
+    background: #007acc;
+    color: #fff;
+    border-radius: 6px;
     font-weight: bold;
-    color: #007acc;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
     list-style: none;
 }
 
-.card-more summary:focus {
-    outline: none;
-}
-
-.card-more .open::after {
-    content: " ▼";
-    font-size: 12px;
-}
-
-.card-more[open] .open {
+.card-more summary::-webkit-details-marker {
     display: none;
 }
 
-.card-more .close {
-    display: none;
-}
-
-.card-more[open] .close {
-    display: inline;
-}
-
-.card-more p {
-    margin-top: 6px;
-    line-height: 1.4;
-    animation: fadeIn 0.2s ease-in-out;
-}
-
-::-webkit-details-marker {
-    display: none;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card-more summary:hover {
+    background: #005fa3;
 }
