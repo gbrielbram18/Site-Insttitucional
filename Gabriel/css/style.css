@@ -682,3 +682,34 @@ footer {
 }
 
 
+/* Tema escuro */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header,
+body.dark .card,
+body.dark .atendimento-section,
+body.dark .avaliacoes,
+body.dark .indicador,
+body.dark footer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark a {
+  color: #ffd60a; /* links no modo escuro */
+}
+
+body.dark .btn-outline {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark #btn-primary {
+  background-color: #1a73e8;
+  color: #fff;
+}
+

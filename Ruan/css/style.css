@@ -562,3 +562,48 @@ footer {
     font-size: 1.6rem;
   }
 }
+
+
+
+/* Tema escuro */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header,
+body.dark .cards-container .card,
+body.dark .comercial,
+body.dark .compromisso,
+body.dark .indicadores .indicador,
+body.dark .atendimento-section,
+body.dark .avaliacoes,
+body.dark footer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark a {
+  color: #ffd60a;
+}
+
+body.dark .btn-outline {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark #btn-primary,
+body.dark .btn-avaliar {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+body.dark .depoimento {
+  background-color: #000000;
+}
+
+
+body.dark p{
+ color: white;
+}
