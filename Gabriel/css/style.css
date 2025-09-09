@@ -94,6 +94,8 @@ body {
 .btn-primary {
   background: #007acc;
   color: #fff;
+  display: f;
+  
 }
 
 #nav-toggle {
@@ -678,3 +680,5 @@ footer {
   width: 100%;
   height: auto;
 }
+
+
