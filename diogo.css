@@ -384,3 +384,29 @@ body.dark .btn-avaliar {
   background-color: #1a73e8;
   color: #fff;
 }
+
+
+body.dark .card{
+    background-color: #1e1e1e  ;
+}
+
+
+body.dark .card h5,h3{
+    color: white;
+}
+
+body.dark .num, .card-label{
+color: blue;
+}
+
+body.dark .preco{
+    color: whitesmoke;
+}
+
+body.dark .mes{
+    color: white;
+}
+
+body.dark .card-more p{
+color: white;
+}
